@@ -1,0 +1,8 @@
+{
+  "name": "boathouse",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "95677ff2"
+}

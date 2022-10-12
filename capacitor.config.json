@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "boathouse",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
