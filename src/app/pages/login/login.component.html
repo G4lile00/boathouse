@@ -1,0 +1,30 @@
+<div class="container" [formGroup]="formLogin">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Boathouse</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-margin-bottom">
+        <ion-item fill="solid">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" formControlName="login"></ion-input>
+        </ion-item>
+      </div>
+      <div class="ion-margin-bottom">
+        <ion-item fill="solid">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+      </div>
+      <div>
+        <ion-button
+          color="primary"
+          expand="block"
+          shape="round"
+          (click)="login()"
+          >Login</ion-button
+        >
+      </div>
+    </ion-card-content>
+  </ion-card>
+</div>

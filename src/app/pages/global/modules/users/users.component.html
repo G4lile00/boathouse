@@ -1,0 +1,7 @@
+<ion-list [inset]="true">
+  <ion-item *ngFor="let user of users" [href]="'user/edit'">
+    <ion-label>
+      <fa-icon [icon]="userIcon"></fa-icon> {{ user.ds_name }}
+    </ion-label>
+  </ion-item>
+</ion-list>
