@@ -10,7 +10,20 @@ export class LocationService {
   private url = environment.apiUrl;
   constructor(private http: HttpClient) {}
 
-  public login(): Observable<any> {
-    return this.http.get<any>(`${this.url}/allusers`);
+  public listLocation(id: string): Observable<any> {
+    let location = { id_location: parseInt(id) };
+    return this.http.post<any>(`${this.url}/getlocation`, location);
+  }
+  public update(body: any): Observable<any> {
+    return this.http.post<any>(`${this.url}/updatelocation`, body);
+  }
+  public delete(id: number): Observable<any> {
+    let location = { id_location: id };
+
+    return this.http.post<any>(`${this.url}/deletelocation`, location);
+  }
+
+  public create(body: any): Observable<any> {
+    return this.http.put<any>(`${this.url}/createlocation`, body);
   }
 }

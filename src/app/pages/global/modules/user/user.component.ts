@@ -23,6 +23,7 @@ export class UserComponent implements OnInit {
     this.formLogin = formBuilder.group({
       name: [null],
       password: [null],
+      login: [null],
     });
   }
 
@@ -37,6 +38,15 @@ export class UserComponent implements OnInit {
   }
   public delete() {
     this.service.delete().subscribe((res) => {
+      localStorage.clear();
+      console.log(res);
+    });
+  }
+
+  public create() {
+    const form = this.formLogin.getRawValue();
+
+    this.service.create(form).subscribe((res) => {
       console.log(res);
     });
   }

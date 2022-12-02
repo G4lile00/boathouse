@@ -4,12 +4,13 @@ import { GlobalComponent } from './pages/global/global.component';
 import { GlobalModule } from './pages/global/global.module';
 import { CompanyComponent } from './pages/global/modules/company/company.component';
 import { HomeComponent } from './pages/global/modules/home/home.component';
-import { LocationComponent } from './pages/global/modules/location/location.component';
+import { LocationsComponent } from './pages/global/modules/locations/locations.component';
 import { UsersComponent } from './pages/global/modules/users/users.component';
 import { UserComponent } from './pages/global/modules/user/user.component';
 
 import { LoginComponent } from './pages/login/login.component';
 import { UsuarioAutenticadoGuard } from './services/guards/usuario-autenticado.guard';
+import { LocationComponent } from './pages/global/modules/location/location.component';
 
 const routes: Routes = [
   {
@@ -26,7 +27,8 @@ const routes: Routes = [
       { path: 'user', component: UsersComponent },
       { path: 'user/edit', component: UserComponent },
       { path: 'company', component: CompanyComponent },
-      { path: 'location', component: LocationComponent },
+      { path: 'location', component: LocationsComponent },
+      { path: 'location/:id', component: LocationComponent },
     ],
   },
   {

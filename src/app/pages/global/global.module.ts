@@ -17,6 +17,7 @@ import { UsersComponent } from './modules/users/users.component';
 import { LocationComponent } from './modules/location/location.component';
 import { CompanyComponent } from './modules/company/company.component';
 import { UserComponent } from './modules/user/user.component';
+import { LocationsComponent } from './modules/locations/locations.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { UserComponent } from './modules/user/user.component';
     UsersComponent,
     UserComponent,
     LocationComponent,
+    LocationsComponent,
     CompanyComponent,
   ],
   imports: [

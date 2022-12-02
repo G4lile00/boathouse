@@ -1,0 +1,8 @@
+<ion-list [inset]="true">
+  <ion-item
+    *ngFor="let location of locations"
+    [href]="'location/' + location.id_location"
+  >
+    <ion-label> {{ location.ds_location }} </ion-label>
+  </ion-item>
+</ion-list>

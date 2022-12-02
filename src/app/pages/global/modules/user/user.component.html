@@ -1,34 +1,69 @@
-<ion-card>
-  <ion-card-content>
-    <div [formGroup]="formLogin">
-      <div class="ion-margin-bottom">
-        <ion-item fill="solid">
-          <ion-label position="floating">Nome</ion-label>
-          <ion-input type="text" formControlName="name"></ion-input>
-        </ion-item>
+<div class="half">
+  <ion-card>
+    <ion-card-content>
+      <div [formGroup]="formLogin">
+        <div class="ion-margin-bottom">
+          <ion-item fill="solid">
+            <ion-label position="floating">Nome</ion-label>
+            <ion-input type="text" formControlName="name"></ion-input>
+          </ion-item>
+        </div>
+        <div class="ion-margin-bottom">
+          <ion-item fill="solid">
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+        </div>
+        <div>
+          <ion-button
+            color="primary"
+            expand="block"
+            shape="round"
+            (click)="update()"
+            >Update</ion-button
+          >
+          <ion-button
+            color="danger"
+            expand="block"
+            shape="round"
+            (click)="delete()"
+            >Delete</ion-button
+          >
+        </div>
       </div>
-      <div class="ion-margin-bottom">
-        <ion-item fill="solid">
-          <ion-label position="floating">Password</ion-label>
-          <ion-input type="password" formControlName="password"></ion-input>
-        </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <div [formGroup]="formLogin">
+        <div class="ion-margin-bottom">
+          <ion-item fill="solid">
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" formControlName="login"></ion-input>
+          </ion-item>
+        </div>
+        <div class="ion-margin-bottom">
+          <ion-item fill="solid">
+            <ion-label position="floating">Nome</ion-label>
+            <ion-input type="text" formControlName="name"></ion-input>
+          </ion-item>
+        </div>
+        <div class="ion-margin-bottom">
+          <ion-item fill="solid">
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+        </div>
+        <div>
+          <ion-button
+            color="primary"
+            expand="block"
+            shape="round"
+            (click)="create()"
+            >Create</ion-button
+          >
+        </div>
       </div>
-      <div>
-        <ion-button
-          color="primary"
-          expand="block"
-          shape="round"
-          (click)="update()"
-          >Update</ion-button
-        >
-        <ion-button
-          color="danger"
-          expand="block"
-          shape="round"
-          (click)="delete()"
-          >Delete</ion-button
-        >
-      </div>
-    </div>
-  </ion-card-content>
-</ion-card>
+    </ion-card-content>
+  </ion-card>
+</div>

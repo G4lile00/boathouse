@@ -17,4 +17,8 @@ export class UserService {
     return this.http.delete<any>(`${this.url}/deleteuser`);
     localStorage.clear();
   }
+
+  public create(body: any): Observable<any> {
+    return this.http.put<any>(`${this.url}/createuser`, body);
+  }
 }
